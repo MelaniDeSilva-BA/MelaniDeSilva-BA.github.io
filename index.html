@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Melani De Silva — Business Analyst · Product Owner · Data Analytics | Melbourne</title>
+<meta name="description" content="Melbourne-based Business Analyst and Product Owner with a Master of Data Science. Case studies across AI computer vision, e-commerce, healthtech and analytics.">
+
+<!-- ==========================================================================
+  HOW TO EDIT / PUBLISH
+  - This is a single self-contained file. Nothing to install.
+  - Every project lives in a <article class="proj"> block. Copy one to add more.
+  - To go live: put this file in your GitHub Pages repo and rename it index.html
+    (or link to it). See "HOW TO PUBLISH AND EDIT.md" in this folder.
+  - Dashboard embeds: search for "EMBED SLOT" and paste your Power BI / Tableau
+    Publish-to-web iframe where indicated.
+=========================================================================== -->
+
+<style>
+:root{
+  --bg:#080b14; --bg2:#0d1220; --surface:#111827; --surface2:#161f33;
+  --line:#1f2a44; --line2:#2a3860;
+  --ink:#eef2fb; --mut:#9aa6be; --dim:#6b7796;
+  --teal:#2dd4bf; --blue:#4f8cff; --violet:#a78bfa; --amber:#fbbf24;
+  --grad:linear-gradient(120deg,#2dd4bf 0%,#4f8cff 55%,#a78bfa 100%);
+  --glow:0 0 0 1px var(--line),0 20px 50px -20px rgba(79,140,255,.35);
+  --radius:16px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Inter','Segoe UI',system-ui,Arial,sans-serif;
+  background:radial-gradient(1200px 700px at 80% -10%,rgba(79,140,255,.14),transparent 60%),
+             radial-gradient(1000px 600px at -10% 10%,rgba(45,212,191,.10),transparent 55%),
+             var(--bg);
+  color:var(--ink);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden;
+}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+a{color:inherit;text-decoration:none}
+.grad-text{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+
+/* NAV */
+nav{position:sticky;top:0;z-index:50;backdrop-filter:blur(14px);
+  background:rgba(8,11,20,.72);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{font-weight:800;letter-spacing:.3px;font-size:1.02rem}
+.brand span{display:inline-block;width:9px;height:9px;border-radius:50%;background:var(--grad);margin-right:9px;vertical-align:middle}
+.navlinks{display:flex;gap:26px}
+.navlinks a{color:var(--mut);font-size:.9rem;font-weight:600;transition:color .2s}
+.navlinks a:hover{color:var(--ink)}
+.nav-cta{padding:9px 18px;border-radius:999px;background:var(--grad);color:#04121f !important;font-weight:700;font-size:.85rem}
+@media(max-width:760px){.navlinks{display:none}}
+
+/* HERO */
+header{position:relative;padding:96px 0 72px;overflow:hidden}
+.orb{position:absolute;border-radius:50%;filter:blur(70px);opacity:.5;z-index:0}
+.orb.a{width:340px;height:340px;background:#2dd4bf;top:-80px;right:6%;animation:float 9s ease-in-out infinite}
+.orb.b{width:300px;height:300px;background:#4f8cff;bottom:-120px;left:0;animation:float 11s ease-in-out infinite reverse}
+.orb.c{width:220px;height:220px;background:#a78bfa;top:120px;left:40%;animation:float 13s ease-in-out infinite}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-26px)}}
+header .wrap{position:relative;z-index:2}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;padding:7px 15px;border:1px solid var(--line2);
+  border-radius:999px;font-size:.8rem;color:var(--mut);font-weight:600;margin-bottom:22px;background:rgba(17,24,39,.6)}
+.eyebrow .dot{width:8px;height:8px;border-radius:50%;background:var(--teal);box-shadow:0 0 10px var(--teal);animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
+h1{font-size:clamp(2.4rem,6vw,4.3rem);line-height:1.04;font-weight:800;letter-spacing:-1px}
+.hero-sub{font-size:clamp(1.05rem,2.4vw,1.4rem);color:var(--mut);margin-top:18px;max-width:640px;font-weight:500}
+.hero-sub b{color:var(--ink);font-weight:700}
+.hero-btns{display:flex;gap:14px;flex-wrap:wrap;margin-top:34px}
+.btn{padding:13px 26px;border-radius:999px;font-weight:700;font-size:.95rem;transition:transform .18s,box-shadow .18s;display:inline-flex;align-items:center;gap:8px}
+.btn:hover{transform:translateY(-2px)}
+.btn-p{background:var(--grad);color:#04121f;box-shadow:0 12px 30px -10px rgba(79,140,255,.6)}
+.btn-g{border:1px solid var(--line2);color:var(--ink);background:rgba(17,24,39,.5)}
+.btn-g:hover{border-color:var(--teal)}
+
+/* STAT STRIP */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:56px}
+.stat{background:linear-gradient(180deg,var(--surface),var(--bg2));border:1px solid var(--line);
+  border-radius:var(--radius);padding:22px 20px;position:relative;overflow:hidden}
+.stat::before{content:"";position:absolute;inset:0;background:var(--grad);opacity:0;transition:opacity .3s}
+.stat:hover::before{opacity:.06}
+.stat .num{font-size:1.9rem;font-weight:800;line-height:1}
+.stat .lbl{color:var(--mut);font-size:.82rem;margin-top:8px;font-weight:500}
+@media(max-width:760px){.stats{grid-template-columns:repeat(2,1fr)}}
+
+/* SECTIONS */
+section{padding:80px 0;position:relative}
+.sec-head{margin-bottom:44px;max-width:720px}
+.sec-tag{color:var(--teal);font-weight:700;font-size:.82rem;letter-spacing:2px;text-transform:uppercase}
+.sec-head h2{font-size:clamp(1.7rem,4vw,2.5rem);font-weight:800;margin-top:10px;letter-spacing:-.5px}
+.sec-head p{color:var(--mut);margin-top:12px;font-size:1.02rem}
+
+/* FILTER TABS */
+.filters{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:34px}
+.chip{padding:9px 18px;border-radius:999px;border:1px solid var(--line2);background:rgba(17,24,39,.5);
+  color:var(--mut);font-weight:600;font-size:.86rem;cursor:pointer;transition:all .2s}
+.chip:hover{color:var(--ink);border-color:var(--teal)}
+.chip.active{background:var(--grad);color:#04121f;border-color:transparent}
+
+/* PROJECT CARDS */
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+@media(max-width:820px){.grid{grid-template-columns:1fr}}
+.proj{background:linear-gradient(180deg,var(--surface),var(--bg2));border:1px solid var(--line);
+  border-radius:var(--radius);overflow:hidden;transition:transform .25s,box-shadow .25s,border-color .25s;
+  display:flex;flex-direction:column}
+.proj:hover{transform:translateY(-4px);box-shadow:var(--glow);border-color:var(--line2)}
+.proj-top{padding:24px 24px 0}
+.proj .dtag{display:inline-block;font-size:.72rem;font-weight:700;letter-spacing:.5px;text-transform:uppercase;
+  padding:4px 11px;border-radius:999px;margin-bottom:14px}
+.d-ai{background:rgba(45,212,191,.14);color:#5fe6d4}
+.d-ecom{background:rgba(79,140,255,.14);color:#8bb4ff}
+.d-health{background:rgba(167,139,250,.16);color:#c3aefc}
+.d-data{background:rgba(251,191,36,.14);color:#fcd267}
+.proj h3{font-size:1.22rem;font-weight:800;line-height:1.25}
+.proj .client{color:var(--dim);font-size:.85rem;margin-top:5px;font-weight:600}
+.proj .blurb{color:var(--mut);font-size:.94rem;margin-top:14px}
+.proj .metrics{display:flex;gap:20px;flex-wrap:wrap;margin-top:18px;padding-top:18px;border-top:1px solid var(--line)}
+.proj .metrics div{min-width:0}
+.proj .metrics .m{font-size:1.25rem;font-weight:800;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;line-height:1}
+.proj .metrics .k{font-size:.74rem;color:var(--dim);margin-top:4px}
+.proj-foot{padding:16px 24px 22px;margin-top:auto;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.star-toggle{background:none;border:none;color:var(--teal);font-weight:700;font-size:.88rem;cursor:pointer;display:inline-flex;align-items:center;gap:6px}
+.star-toggle svg{transition:transform .25s}
+.star-toggle.open svg{transform:rotate(180deg)}
+.live-link{font-size:.82rem;color:var(--mut);font-weight:600;display:inline-flex;align-items:center;gap:5px}
+.live-link:hover{color:var(--blue)}
+/* STAR expand */
+.star{max-height:0;overflow:hidden;transition:max-height .4s ease;background:var(--bg2);border-top:1px solid transparent}
+.star.open{max-height:900px;border-top-color:var(--line)}
+.star-in{padding:22px 24px}
+.star-row{display:flex;gap:14px;padding:11px 0;border-bottom:1px solid var(--line)}
+.star-row:last-child{border-bottom:none}
+.star-row .lt{flex:0 0 82px;font-weight:800;font-size:.74rem;letter-spacing:.5px;text-transform:uppercase;color:var(--teal);padding-top:2px}
+.star-row.t .lt{color:var(--blue)} .star-row.a .lt{color:var(--violet)} .star-row.r .lt{color:var(--amber)}
+.star-row .lx{color:var(--mut);font-size:.92rem}
+.star-row .lx b{color:var(--ink)}
+
+/* DASHBOARDS */
+.dash-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+@media(max-width:820px){.dash-grid{grid-template-columns:1fr}}
+.dash{background:linear-gradient(180deg,var(--surface),var(--bg2));border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+.dash-frame{aspect-ratio:16/10;background:
+   linear-gradient(135deg,rgba(45,212,191,.08),rgba(79,140,255,.08)),var(--bg2);
+   position:relative;display:flex;align-items:center;justify-content:center;border-bottom:1px solid var(--line)}
+.dash-frame iframe{width:100%;height:100%;border:0;display:block}
+.mock{width:88%;height:80%;display:flex;flex-direction:column;gap:8px}
+.mock .mrow{display:flex;gap:8px;flex:1}
+.mock .mc{flex:1;border-radius:8px;background:linear-gradient(180deg,var(--surface2),var(--bg2));border:1px solid var(--line2);position:relative;overflow:hidden}
+.mock .bars{display:flex;align-items:flex-end;gap:5px;padding:10px;height:100%}
+.mock .bars i{flex:1;background:var(--grad);border-radius:3px 3px 0 0;opacity:.8}
+.mock .donut{position:absolute;inset:0;margin:auto;width:56px;height:56px;border-radius:50%;
+  background:conic-gradient(var(--teal) 0 62%,var(--blue) 62% 84%,var(--violet) 84% 100%);
+  -webkit-mask:radial-gradient(circle 17px at center,transparent 98%,#000 100%);mask:radial-gradient(circle 17px at center,transparent 98%,#000 100%)}
+.dash-badge{position:absolute;top:12px;left:12px;font-size:.68rem;font-weight:700;letter-spacing:.5px;text-transform:uppercase;
+  padding:4px 10px;border-radius:999px;background:rgba(8,11,20,.75);border:1px solid var(--line2)}
+.badge-live{color:var(--teal)} .badge-soon{color:var(--amber)}
+.dash-body{padding:20px 22px}
+.dash-body h3{font-size:1.1rem;font-weight:800}
+.dash-body .tool{font-size:.78rem;color:var(--dim);font-weight:700;margin-top:4px;text-transform:uppercase;letter-spacing:.5px}
+.dash-body p{color:var(--mut);font-size:.9rem;margin-top:12px}
+.dash-body .cta{margin-top:16px;display:inline-flex;align-items:center;gap:6px;font-weight:700;font-size:.85rem;color:var(--teal)}
+
+/* BUILD PLAN */
+.plan{background:linear-gradient(180deg,var(--surface),var(--bg2));border:1px solid var(--line2);border-radius:var(--radius);padding:30px;margin-top:34px}
+.plan h3{font-size:1.15rem;font-weight:800;display:flex;align-items:center;gap:10px}
+.plan-list{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:20px}
+@media(max-width:760px){.plan-list{grid-template-columns:1fr}}
+.plan-item{display:flex;gap:14px}
+.plan-item .n{flex:0 0 30px;height:30px;border-radius:8px;background:var(--grad);color:#04121f;font-weight:800;display:flex;align-items:center;justify-content:center;font-size:.9rem}
+.plan-item .pt{font-weight:700;font-size:.95rem}
+.plan-item .pd{color:var(--mut);font-size:.85rem;margin-top:2px}
+
+/* SKILLS / DOMAINS */
+.two{display:grid;grid-template-columns:1.4fr 1fr;gap:30px}
+@media(max-width:820px){.two{grid-template-columns:1fr}}
+.panel{background:linear-gradient(180deg,var(--surface),var(--bg2));border:1px solid var(--line);border-radius:var(--radius);padding:28px}
+.panel h3{font-size:1.05rem;margin-bottom:16px;font-weight:800}
+.sk-group{margin-bottom:16px}
+.sk-group .lab{font-size:.78rem;color:var(--dim);font-weight:700;text-transform:uppercase;letter-spacing:.5px;margin-bottom:9px}
+.pills{display:flex;flex-wrap:wrap;gap:8px}
+.pill{padding:6px 14px;border-radius:999px;border:1px solid var(--line2);background:rgba(17,24,39,.5);font-size:.83rem;color:var(--mut);font-weight:600;transition:all .2s}
+.pill:hover{color:var(--ink);border-color:var(--teal);transform:translateY(-1px)}
+.dom-row{display:flex;align-items:center;gap:12px;padding:11px 0;border-bottom:1px solid var(--line)}
+.dom-row:last-child{border-bottom:none}
+.dom-row .ic{width:34px;height:34px;border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:1rem;flex:0 0 34px}
+.dom-row .dn{font-weight:700;font-size:.92rem}
+.dom-row .dc{color:var(--dim);font-size:.8rem}
+
+/* CERTS timeline */
+.certs{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:8px}
+@media(max-width:760px){.certs{grid-template-columns:1fr}}
+.cert{display:flex;gap:12px;align-items:flex-start;padding:14px;border:1px solid var(--line);border-radius:12px;background:rgba(17,24,39,.4)}
+.cert .ck{color:var(--teal);flex:0 0 auto;margin-top:2px}
+.cert .cn{font-weight:700;font-size:.9rem}
+.cert .cy{color:var(--dim);font-size:.78rem}
+
+/* CONTACT */
+.cta-band{text-align:center;background:linear-gradient(180deg,var(--surface),var(--bg2));border:1px solid var(--line2);
+  border-radius:24px;padding:56px 28px;position:relative;overflow:hidden}
+.cta-band::before{content:"";position:absolute;top:-60px;left:50%;transform:translateX(-50%);width:380px;height:200px;background:var(--grad);filter:blur(90px);opacity:.35}
+.cta-band h2{font-size:clamp(1.7rem,4vw,2.6rem);font-weight:800;position:relative}
+.cta-band p{color:var(--mut);margin-top:12px;position:relative}
+.cta-links{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:28px;position:relative}
+footer{padding:40px 0;text-align:center;color:var(--dim);font-size:.85rem;border-top:1px solid var(--line);margin-top:20px}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:none}
+.hidden{display:none !important}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <div class="brand"><span></span>Melani De Silva</div>
+    <div class="navlinks">
+      <a href="#work">Work</a>
+      <a href="#dashboards">Dashboards</a>
+      <a href="#skills">Skills</a>
+      <a href="#about">About</a>
+    </div>
+    <a class="nav-cta" href="mailto:melanidslv@gmail.com">Get in touch</a>
+  </div>
+</nav>
+
+<!-- ============================ HERO ============================ -->
+<header>
+  <div class="orb a"></div><div class="orb b"></div><div class="orb c"></div>
+  <div class="wrap">
+    <div class="eyebrow reveal"><span class="dot"></span>Melbourne, Australia · Open to BA / Product Owner / Data Analyst roles</div>
+    <h1 class="reveal">Business Analyst who turns messy<br><span class="grad-text">requirements into shipped products.</span></h1>
+    <p class="hero-sub reveal">4+ years bridging engineering and the C-suite across <b>AI computer vision, e-commerce, healthtech and analytics</b>. Master of Data Science. Certified Scrum Product Owner &amp; Scrum Master.</p>
+    <div class="hero-btns reveal">
+      <a class="btn btn-p" href="#work">View case studies →</a>
+      <a class="btn btn-g" href="resume.pdf" target="_blank">Download resume</a>
+    </div>
+
+    <div class="stats">
+      <div class="stat reveal"><div class="num grad-text" data-count="4">4+</div><div class="lbl">Years across 3 countries' teams</div></div>
+      <div class="stat reveal"><div class="num grad-text">USD 36M</div><div class="lbl">Valuation an AI project I supported reached</div></div>
+      <div class="stat reveal"><div class="num grad-text">3M+</div><div class="lbl">Images in an annotation pipeline I ran</div></div>
+      <div class="stat reveal"><div class="num grad-text">0</div><div class="lbl">Critical defects at e-commerce go-live</div></div>
+    </div>
+  </div>
+</header>
+
+<!-- ============================ WORK ============================ -->
+<section id="work">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="sec-tag">Case studies</div>
+      <h2>Work, grouped by domain</h2>
+      <p>Every card opens a full STAR breakdown — the situation, my task, what I actually did, and the result. Filter by the domain you're hiring for.</p>
+    </div>
+
+    <div class="filters reveal">
+      <button class="chip active" data-f="all">All work</button>
+      <button class="chip" data-f="ai">AI &amp; Computer Vision</button>
+      <button class="chip" data-f="ecom">E-commerce</button>
+      <button class="chip" data-f="health">Healthcare &amp; HealthTech</button>
+      <button class="chip" data-f="data">Data &amp; Analytics</button>
+    </div>
+
+    <div class="grid" id="projgrid">
+
+      <!-- 1. Vehicle Damage Detection -->
+      <article class="proj reveal" data-domain="ai">
+        <div class="proj-top">
+          <span class="dtag d-ai">AI · Computer Vision · InsurTech</span>
+          <h3>Automating Vehicle Damage Detection</h3>
+          <div class="client">Veracity Group × Wenn ASA (Norway) · Mobility &amp; Fleet</div>
+          <p class="blurb">Replaced slow, dispute-prone manual vehicle inspections with a hybrid computer-vision platform, and ran the 3M-image annotation pipeline that trained the models.</p>
+          <div class="metrics">
+            <div><div class="m">3M+</div><div class="k">Images annotated</div></div>
+            <div><div class="m">1M → 36M</div><div class="k">USD valuation (2020–25)</div></div>
+            <div><div class="m">Real-time</div><div class="k">Scan-to-report</div></div>
+          </div>
+        </div>
+        <div class="proj-foot">
+          <button class="star-toggle">STAR breakdown <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 9l6 6 6-6"/></svg></button>
+        </div>
+        <div class="star"><div class="star-in">
+          <div class="star-row s"><div class="lt">Situation</div><div class="lx">Fleet operators, rental companies and repair shops inspected vehicles <b>manually</b> — costly, slow, inconsistent and a constant source of damage disputes.</div></div>
+          <div class="star-row t"><div class="lt">Task</div><div class="lx">As BA/PM at Veracity, define requirements for an automated damage-detection platform and stand up a large-scale annotation operation to train Wenn ASA's proprietary models.</div></div>
+          <div class="star-row a"><div class="lt">Action</div><div class="lx">Specified the real-time scan-to-report flow (mobile &amp; fixed cameras at entry/exit), damage classification and auto-generated reports; set enterprise security requirements (<b>AES-256, TLS, GDPR data residency, tamper-proof logging</b>); and ran a controlled pipeline labelling <b>3M+ images</b> across vehicle types and damage scenarios.</div></div>
+          <div class="star-row r"><div class="lt">Result</div><div class="lx">Dramatic cut in inspection time and operational cost with more consistent documentation. The annotated dataset underpinned a robust model that helped grow Wenn ASA from <b>USD 1M to 36M valuation</b> over five years.</div></div>
+        </div></div>
+      </article>
+
+      <!-- 2. SmartAIConnect -->
+      <article class="proj reveal" data-domain="ai">
+        <div class="proj-top">
+          <span class="dtag d-ai">AI · Responsible-AI SaaS</span>
+          <h3>SmartAIConnect Backend Platform</h3>
+          <div class="client">Veracity Digital × Smart AI · AI-powered security cameras</div>
+          <p class="blurb">Requirements and delivery for the backend behind a Responsible AI Framework launching across APAC — high-volume camera data, subscriptions, and two distinct user portals.</p>
+          <div class="metrics">
+            <div><div class="m">2</div><div class="k">Role-specific portals</div></div>
+            <div><div class="m">APAC</div><div class="k">Expansion-ready</div></div>
+            <div><div class="m">Cloud</div><div class="k">Scalable by design</div></div>
+          </div>
+        </div>
+        <div class="proj-foot">
+          <button class="star-toggle">STAR breakdown <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 9l6 6 6-6"/></svg></button>
+        </div>
+        <div class="star"><div class="star-in">
+          <div class="star-row s"><div class="lt">Situation</div><div class="lx">Smart AI's camera systems needed a backend that could handle high data volume and support a Responsible-AI product launch across APAC and, later, globally.</div></div>
+          <div class="star-row t"><div class="lt">Task</div><div class="lx">Define requirements for a scalable platform with a <b>hierarchical distributor/integrator network</b>, subscription &amp; payment handling, and differentiated portals.</div></div>
+          <div class="star-row a"><div class="lt">Action</div><div class="lx">Elicited and documented requirements for two portals — an <b>end-user portal</b> (camera management) and a <b>systems-integrator portal</b> (client tenancies, billing); specified subscription/payment flows, CSV camera onboarding, and a modular design for third-party integration.</div></div>
+          <div class="star-row r"><div class="lt">Result</div><div class="lx">A robust, reliable platform ready to drive Smart AI's APAC-to-global expansion, with differentiated portals lifting engagement for both audiences.</div></div>
+        </div></div>
+      </article>
+
+      <!-- 3. Kuushy -->
+      <article class="proj reveal" data-domain="health ai">
+        <div class="proj-top">
+          <span class="dtag d-health">HealthTech · AI · Mobile</span>
+          <h3>Kuushy Posture-Health Companion App</h3>
+          <div class="client">Veracity Digital × SG Innovate (Singapore)</div>
+          <p class="blurb">A cross-platform app that pairs sensor-cushion data with a real-time AI posture model, using gamification to actually change sitting habits.</p>
+          <div class="metrics">
+            <div><div class="m">Real-time</div><div class="k">Posture feedback</div></div>
+            <div><div class="m">iOS + Android</div><div class="k">Cross-platform</div></div>
+            <div><div class="m">↑</div><div class="k">Engagement &amp; retention</div></div>
+          </div>
+        </div>
+        <div class="proj-foot">
+          <button class="star-toggle">STAR breakdown <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 9l6 6 6-6"/></svg></button>
+          <a class="live-link" href="https://www.youtube.com/watch?v=Bxa7RYGiEa4" target="_blank">▶ Demo</a>
+        </div>
+        <div class="star"><div class="star-in">
+          <div class="star-row s"><div class="lt">Situation</div><div class="lx">Prolonged poor sitting posture drives back pain, neck strain and lost workplace productivity. SG Innovate wanted a scalable way to fix it at the root.</div></div>
+          <div class="star-row t"><div class="lt">Task</div><div class="lx">BA on a mobile app that turns raw sensor data into real-time, useful posture coaching people would actually stick with.</div></div>
+          <div class="star-row a"><div class="lt">Action</div><div class="lx">Defined requirements for real-time posture classification and feedback, integration with sensor-equipped cushions, a cross-platform iOS/Android build, and <b>gamification</b> (personalised tips, exercises) to drive habit change.</div></div>
+          <div class="star-row r"><div class="lt">Result</div><div class="lx">Higher user engagement and retention, with measurable posture improvement in user feedback and analytics. Shipped with a public product demo.</div></div>
+        </div></div>
+      </article>
+
+      <!-- 4. Veracity e-commerce platform -->
+      <article class="proj reveal" data-domain="ecom">
+        <div class="proj-top">
+          <span class="dtag d-ecom">E-commerce · Delivery</span>
+          <h3>E-commerce Platform, End-to-End</h3>
+          <div class="client">Veracity Group · Distributed teams in 4 countries</div>
+          <p class="blurb">Full BA + PM ownership of an e-commerce platform delivered two weeks early with zero critical defects, coordinating across four time zones.</p>
+          <div class="metrics">
+            <div><div class="m">2 wks</div><div class="k">Ahead of schedule</div></div>
+            <div><div class="m">100+</div><div class="k">User stories</div></div>
+            <div><div class="m">30%</div><div class="k">Less meeting time</div></div>
+          </div>
+        </div>
+        <div class="proj-foot">
+          <button class="star-toggle">STAR breakdown <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 9l6 6 6-6"/></svg></button>
+        </div>
+        <div class="star"><div class="star-in">
+          <div class="star-row s"><div class="lt">Situation</div><div class="lx">A build spanning teams in <b>four countries</b> with 16-hour time gaps, and C-suite stakeholders who needed plain-English visibility into a technical delivery.</div></div>
+          <div class="star-row t"><div class="lt">Task</div><div class="lx">Own BA and PM end-to-end: requirements, backlog, UAT and go-live, while keeping four time zones aligned.</div></div>
+          <div class="star-row a"><div class="lt">Action</div><div class="lx">Wrote 100+ user stories and acceptance criteria; ran <b>UAT across 200+ users</b>, tracking 150+ defects in JIRA to sign-off; built <b>Power BI executive dashboards</b> and async-first Confluence docs; resolved AU–Singapore scope conflicts with impact-vs-effort prioritisation workshops.</div></div>
+          <div class="star-row r"><div class="lt">Result</div><div class="lx">Delivered <b>two weeks early with zero critical defects</b>, cut status-meeting time 30% via dashboards, and landed an agreed phased MVP.</div></div>
+        </div></div>
+      </article>
+
+      <!-- 5. Velona Cuddles -->
+      <article class="proj reveal" data-domain="ecom">
+        <div class="proj-top">
+          <span class="dtag d-ecom">E-commerce · Subscription · Live</span>
+          <h3>Velona Cuddles — D2C + Subscription</h3>
+          <div class="client">SevenSigns · Sri Lanka's leading baby-diaper brand</div>
+          <p class="blurb">Direct-to-consumer platform and subscription app for a market-leading baby-care brand, spanning newborn-to-adult ranges plus parenting content tools.</p>
+          <div class="metrics">
+            <div><div class="m">D2C</div><div class="k">+ subscription app</div></div>
+            <div><div class="m">iOS + Android</div><div class="k">On both stores</div></div>
+            <div><div class="m">4</div><div class="k">Product segments</div></div>
+          </div>
+        </div>
+        <div class="proj-foot">
+          <button class="star-toggle">STAR breakdown <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 9l6 6 6-6"/></svg></button>
+          <a class="live-link" href="https://velonacuddles.com/" target="_blank">↗ Live site</a>
+        </div>
+        <div class="star"><div class="star-in">
+          <div class="star-row s"><div class="lt">Situation</div><div class="lx">A leading baby-care brand needed to sell direct and build recurring revenue rather than rely solely on retail.</div></div>
+          <div class="star-row t"><div class="lt">Task</div><div class="lx">Support BA/PM delivery of an e-commerce platform plus a subscription model that keeps parents buying.</div></div>
+          <div class="star-row a"><div class="lt">Action</div><div class="lx">Coordinated requirements for a catalogue across <b>newborn, baby, toddler and adult</b> ranges, discounted subscription pricing, a store locator, parenting/pregnancy content tools, and companion <b>iOS + Android subscription apps</b>.</div></div>
+          <div class="star-row r"><div class="lt">Result</div><div class="lx">A live D2C platform with subscription apps on the App Store and Google Play, giving the brand a recurring-revenue channel. <b>velonacuddles.com</b></div></div>
+        </div></div>
+      </article>
+
+      <!-- 6. NBC / Nature's Secrets -->
+      <article class="proj reveal" data-domain="ecom">
+        <div class="proj-top">
+          <span class="dtag d-ecom">E-commerce · Beauty · Live</span>
+          <h3>Nature's Secrets — Sustainable Beauty Store</h3>
+          <div class="client">SevenSigns · Nature's Beauty Creations Ltd</div>
+          <p class="blurb">Online store for a sustainable, natural beauty brand — clean product catalogue, brand storytelling and a conversion-focused shop experience.</p>
+          <div class="metrics">
+            <div><div class="m">Live</div><div class="k">Production store</div></div>
+            <div><div class="m">Retail</div><div class="k">+ D2C channel</div></div>
+            <div><div class="m">Brand</div><div class="k">-led UX</div></div>
+          </div>
+        </div>
+        <div class="proj-foot">
+          <button class="star-toggle">STAR breakdown <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 9l6 6 6-6"/></svg></button>
+          <a class="live-link" href="https://www.nbc.lk/shop" target="_blank">↗ Live site</a>
+        </div>
+        <div class="star"><div class="star-in">
+          <div class="star-row s"><div class="lt">Situation</div><div class="lx">A sustainable beauty brand needed an online store that carried its ethical, natural positioning while still converting.</div></div>
+          <div class="star-row t"><div class="lt">Task</div><div class="lx">Support requirements and delivery of the e-commerce experience end-to-end.</div></div>
+          <div class="star-row a"><div class="lt">Action</div><div class="lx">Coordinated requirements for the product catalogue, brand storytelling, and a shop flow aligned to the brand's sustainability message; produced specifications the dev team could build without back-and-forth.</div></div>
+          <div class="star-row r"><div class="lt">Result</div><div class="lx">A live production store extending the brand into direct e-commerce. <b>nbc.lk/shop</b></div></div>
+        </div></div>
+      </article>
+
+      <!-- 7. IIHS Healthcare -->
+      <article class="proj reveal" data-domain="health">
+        <div class="proj-top">
+          <span class="dtag d-health">Healthcare Systems · BA</span>
+          <h3>Healthcare Requirements &amp; UAT Program</h3>
+          <div class="client">International Integrated Health Solutions</div>
+          <p class="blurb">Turned vague healthcare-client requirements into testable specifications and low-fi prototypes — cutting UAT defects and scope changes measurably.</p>
+          <div class="metrics">
+            <div><div class="m">40%</div><div class="k">Fewer UAT defects</div></div>
+            <div><div class="m">50%</div><div class="k">Fewer scope changes</div></div>
+            <div><div class="m">95%</div><div class="k">Sprint goal completion</div></div>
+          </div>
+        </div>
+        <div class="proj-foot">
+          <button class="star-toggle">STAR breakdown <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 9l6 6 6-6"/></svg></button>
+        </div>
+        <div class="star"><div class="star-in">
+          <div class="star-row s"><div class="lt">Situation</div><div class="lx">Healthcare clients arrived with vague, shifting requirements that fed scope creep and UAT churn across three concurrent projects.</div></div>
+          <div class="star-row t"><div class="lt">Task</div><div class="lx">Convert ambiguity into requirements development could build once, and stakeholders could sign off with confidence.</div></div>
+          <div class="star-row a"><div class="lt">Action</div><div class="lx">Facilitated <b>20+ stakeholder workshops</b>, delivered BRDs, functional specs and 150+ stories with clear acceptance criteria; built <b>Balsamiq</b> wireframes so stakeholders reviewed visuals not abstractions; ran JIRA boards linking requirements to test cases.</div></div>
+          <div class="star-row r"><div class="lt">Result</div><div class="lx"><b>40% fewer UAT defects</b>, <b>50% fewer scope changes</b> during build, and a 95% sprint-goal completion rate.</div></div>
+        </div></div>
+      </article>
+
+      <!-- 8. GNN thesis -->
+      <article class="proj reveal" data-domain="data">
+        <div class="proj-top">
+          <span class="dtag d-data">Data Science · ML · Thesis</span>
+          <h3>Content Engagement Prediction (GNN)</h3>
+          <div class="client">Deakin University · Master's Thesis · 2026</div>
+          <p class="blurb">Modelled which content types and behaviours drive audience interaction using a Graph Neural Network on a 32M+ comment dataset across 15 categories.</p>
+          <div class="metrics">
+            <div><div class="m">32M+</div><div class="k">Comments modelled</div></div>
+            <div><div class="m">15</div><div class="k">Content categories</div></div>
+            <div><div class="m">GNN</div><div class="k">Python · deep learning</div></div>
+          </div>
+        </div>
+        <div class="proj-foot">
+          <button class="star-toggle">STAR breakdown <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 9l6 6 6-6"/></svg></button>
+        </div>
+        <div class="star"><div class="star-in">
+          <div class="star-row s"><div class="lt">Situation</div><div class="lx">Teams plan content largely on instinct, without a data view of what actually drives engagement.</div></div>
+          <div class="star-row t"><div class="lt">Task</div><div class="lx">Predict audience engagement across 15 content categories and surface the behaviours that move it.</div></div>
+          <div class="star-row a"><div class="lt">Action</div><div class="lx">Built a <b>Graph Neural Network</b> over a <b>32M+ comment</b> dataset in Python, engineering behavioural features and modelling interaction patterns end-to-end.</div></div>
+          <div class="star-row r"><div class="lt">Result</div><div class="lx">A model that flags which content types and behaviours drive interaction — directly usable for planning content that performs.</div></div>
+        </div></div>
+      </article>
+
+      <!-- 9. Power BI promo analytics -->
+      <article class="proj reveal" data-domain="data ecom">
+        <div class="proj-top">
+          <span class="dtag d-data">Retail Analytics · Power BI</span>
+          <h3>Promotion &amp; Category Analytics</h3>
+          <div class="client">Deakin University · 2025</div>
+          <p class="blurb">Analysed ~19,500 transactions across four stores and reframed the finding as a promo-ROI and range-review the business could act on.</p>
+          <div class="metrics">
+            <div><div class="m">19,500</div><div class="k">Transactions</div></div>
+            <div><div class="m">&lt;8%</div><div class="k">Revenue from promos</div></div>
+            <div><div class="m">~70%</div><div class="k">Sales from 2 categories</div></div>
+          </div>
+        </div>
+        <div class="proj-foot">
+          <button class="star-toggle">STAR breakdown <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 9l6 6 6-6"/></svg></button>
+        </div>
+        <div class="star"><div class="star-in">
+          <div class="star-row s"><div class="lt">Situation</div><div class="lx">A retailer ran promotions across four stores without knowing whether they actually drove revenue.</div></div>
+          <div class="star-row t"><div class="lt">Task</div><div class="lx">Quantify promo impact and category contribution, and turn it into a decision the business could make.</div></div>
+          <div class="star-row a"><div class="lt">Action</div><div class="lx">Analysed <b>~19,500 transactions</b> across four stores in <b>Power BI</b>, breaking out promo-driven vs baseline revenue and category contribution.</div></div>
+          <div class="star-row r"><div class="lt">Result</div><div class="lx">Showed promotions drove <b>under 8%</b> of revenue while <b>two categories drove ~70%</b> of sales — reframed as a promo-ROI and range review, not just a chart.</div></div>
+        </div></div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================ DASHBOARDS ============================ -->
+<section id="dashboards" style="background:linear-gradient(180deg,transparent,rgba(13,18,32,.6),transparent)">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="sec-tag">Analytics &amp; dashboards</div>
+      <h2>Dashboards recruiters can click into</h2>
+      <p>Interactive Power BI and Tableau work. Live embeds go straight into these frames — the build plan below is the roadmap I'm executing to fill the rest for the AU market.</p>
+    </div>
+
+    <div class="dash-grid">
+
+      <!-- Live-ready dash 1 -->
+      <div class="dash reveal">
+        <div class="dash-frame">
+          <div class="dash-badge badge-live">● Case study</div>
+          <!-- EMBED SLOT 1: paste Power BI Publish-to-web <iframe> here to replace the mockup -->
+          <div class="mock">
+            <div class="mrow"><div class="mc"><div class="bars"><i style="height:40%"></i><i style="height:65%"></i><i style="height:80%"></i><i style="height:55%"></i><i style="height:90%"></i><i style="height:70%"></i></div></div><div class="mc"><div class="donut"></div></div></div>
+            <div class="mrow"><div class="mc"><div class="bars"><i style="height:70%"></i><i style="height:45%"></i><i style="height:85%"></i><i style="height:60%"></i></div></div></div>
+          </div>
+        </div>
+        <div class="dash-body">
+          <h3>Promotion &amp; Category ROI</h3>
+          <div class="tool">Power BI · retail · 19.5k transactions</div>
+          <p>Promo-driven vs baseline revenue, store comparison and category contribution — the analysis that showed promos drove &lt;8% of revenue.</p>
+          <a class="cta" href="#work">See the STAR breakdown →</a>
+        </div>
+      </div>
+
+      <!-- To build 1: Tableau -->
+      <div class="dash reveal">
+        <div class="dash-frame">
+          <div class="dash-badge badge-soon">◐ Building</div>
+          <!-- EMBED SLOT 2: paste Tableau Public embed <iframe> here -->
+          <div class="mock">
+            <div class="mrow"><div class="mc"><div class="bars"><i style="height:55%"></i><i style="height:75%"></i><i style="height:45%"></i><i style="height:88%"></i><i style="height:62%"></i></div></div></div>
+            <div class="mrow"><div class="mc"><div class="donut" style="background:conic-gradient(var(--blue) 0 45%,var(--violet) 45% 72%,var(--teal) 72% 100%)"></div></div><div class="mc"><div class="bars"><i style="height:60%"></i><i style="height:40%"></i><i style="height:80%"></i></div></div></div>
+          </div>
+        </div>
+        <div class="dash-body">
+          <h3>AU Public Dataset Explorer</h3>
+          <div class="tool">Tableau Public · interactive</div>
+          <p>An interactive Tableau dashboard on an Australian open dataset (e.g. transport, housing or health), covering the keyword that gov &amp; utility ads explicitly ask for.</p>
+          <a class="cta" href="#plan">In the build plan below →</a>
+        </div>
+      </div>
+
+      <!-- To build 2: SQL notebook -->
+      <div class="dash reveal">
+        <div class="dash-frame">
+          <div class="dash-badge badge-soon">◐ Building</div>
+          <div class="mock">
+            <div class="mrow"><div class="mc"><div class="bars"><i style="height:35%"></i><i style="height:55%"></i><i style="height:70%"></i><i style="height:82%"></i><i style="height:95%"></i></div></div><div class="mc"><div class="bars"><i style="height:80%"></i><i style="height:60%"></i><i style="height:40%"></i></div></div></div>
+            <div class="mrow"><div class="mc"><div class="donut"></div></div></div>
+          </div>
+        </div>
+        <div class="dash-body">
+          <h3>SQL Analysis Notebook</h3>
+          <div class="tool">SQL · Python · public GitHub</div>
+          <p>A published notebook on a large open dataset — window functions, CTEs and event-level joins — the proof that survives a live SQL screen.</p>
+          <a class="cta" href="#plan">In the build plan below →</a>
+        </div>
+      </div>
+
+      <!-- To build 3: super/insurance PBI -->
+      <div class="dash reveal">
+        <div class="dash-frame">
+          <div class="dash-badge badge-soon">◐ Building</div>
+          <div class="mock">
+            <div class="mrow"><div class="mc"><div class="bars"><i style="height:50%"></i><i style="height:70%"></i><i style="height:60%"></i><i style="height:85%"></i><i style="height:75%"></i><i style="height:90%"></i></div></div></div>
+            <div class="mrow"><div class="mc"><div class="donut" style="background:conic-gradient(var(--teal) 0 55%,var(--amber) 55% 78%,var(--blue) 78% 100%)"></div></div><div class="mc"><div class="bars"><i style="height:45%"></i><i style="height:85%"></i><i style="height:65%"></i></div></div></div>
+          </div>
+        </div>
+        <div class="dash-body">
+          <h3>Superannuation / Insurance KPIs</h3>
+          <div class="tool">Power BI · financial services</div>
+          <p>A member-outcomes dashboard aimed at the super-fund and insurer BA roles that dominate Melbourne hiring — closing the finance-domain gap on purpose.</p>
+          <a class="cta" href="#plan">In the build plan below →</a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- BUILD PLAN -->
+    <div class="plan reveal" id="plan">
+      <h3>🛠 The build plan — advanced DA portfolio for the AU market</h3>
+      <p style="color:var(--mut);font-size:.92rem;margin-top:8px">Ordered by hiring impact. Each one is a weekend-to-two-weeks piece that turns a "listed on CV" skill into a clickable proof point.</p>
+      <div class="plan-list">
+        <div class="plan-item"><div class="n">1</div><div><div class="pt">SQL notebook with proof</div><div class="pd">Big open dataset, window functions + CTEs + joins, published to GitHub. Half of data-analyst rejections come from live SQL screens — this is the antidote.</div></div></div>
+        <div class="plan-item"><div class="n">2</div><div><div class="pt">One polished Tableau Public dashboard</div><div class="pd">Many gov/utility ads say "Power BI, SQL, Excel and Tableau". A single strong AU-dataset dashboard covers the Tableau keyword honestly.</div></div></div>
+        <div class="plan-item"><div class="n">3</div><div><div class="pt">Financial-services Power BI</div><div class="pd">A super/insurance member-outcomes dashboard. Melbourne BA/DA volume is banks, insurers and super funds — build to that domain deliberately.</div></div></div>
+        <div class="plan-item"><div class="n">4</div><div><div class="pt">AI-in-workflow artefact</div><div class="pd">A requirements pack drafted with AI then hand-validated, plus a BA prompt library. Turns "AI-native" from a claim into something you can show.</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ SKILLS / ABOUT ============================ -->
+<section id="skills">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="sec-tag">Toolkit</div>
+      <h2>Skills &amp; domains</h2>
+    </div>
+    <div class="two">
+      <div class="panel reveal">
+        <h3>What I work with</h3>
+        <div class="sk-group"><div class="lab">Business Analysis</div><div class="pills">
+          <span class="pill">Requirements elicitation</span><span class="pill">User stories &amp; acceptance criteria</span><span class="pill">BRDs &amp; functional specs</span><span class="pill">Process mapping</span><span class="pill">Wireframing (Balsamiq)</span><span class="pill">UAT &amp; traceability</span>
+        </div></div>
+        <div class="sk-group"><div class="lab">Product &amp; Delivery</div><div class="pills">
+          <span class="pill">Agile / Scrum</span><span class="pill">Kanban</span><span class="pill">Backlog ownership</span><span class="pill">Stakeholder workshops</span><span class="pill">Risk &amp; issue management</span><span class="pill">Distributed-team delivery</span>
+        </div></div>
+        <div class="sk-group"><div class="lab">Data &amp; Tools</div><div class="pills">
+          <span class="pill">Power BI</span><span class="pill">SQL</span><span class="pill">Python</span><span class="pill">Excel</span><span class="pill">JIRA</span><span class="pill">Confluence</span><span class="pill">Tableau (building)</span>
+        </div></div>
+        <h3 style="margin-top:26px">Certifications</h3>
+        <div class="certs">
+          <div class="cert"><span class="ck">✓</span><div><div class="cn">Certified Scrum Master (CSM)</div><div class="cy">Scrum Alliance · 2026</div></div></div>
+          <div class="cert"><span class="ck">✓</span><div><div class="cn">Certified Scrum Product Owner (CSPO)</div><div class="cy">Scrum Alliance · 2026</div></div></div>
+          <div class="cert"><span class="ck">✓</span><div><div class="cn">Agile Business Analysis</div><div class="cy">IIBA-endorsed · 2026</div></div></div>
+          <div class="cert"><span class="ck">✓</span><div><div class="cn">Agentic AI in Business Analysis</div><div class="cy">IIBA-endorsed · 2026</div></div></div>
+        </div>
+      </div>
+
+      <div class="panel reveal" id="about">
+        <h3>Domains I've delivered in</h3>
+        <div class="dom-row"><div class="ic d-ai">🤖</div><div><div class="dn">AI &amp; Computer Vision</div><div class="dc">InsurTech, mobility, responsible-AI SaaS</div></div></div>
+        <div class="dom-row"><div class="ic d-ecom">🛒</div><div><div class="dn">E-commerce</div><div class="dc">D2C, subscription, beauty, cross-border</div></div></div>
+        <div class="dom-row"><div class="ic d-health">🩺</div><div><div class="dn">Healthcare &amp; HealthTech</div><div class="dc">Clinical systems, sensor + AI apps</div></div></div>
+        <div class="dom-row"><div class="ic d-data">📊</div><div><div class="dn">Data &amp; Analytics</div><div class="dc">Retail analytics, ML, dashboarding</div></div></div>
+
+        <h3 style="margin-top:26px">Education</h3>
+        <div class="dom-row"><div class="ic d-data">🎓</div><div><div class="dn">Master of Data Science (Business Analytics)</div><div class="dc">Deakin University · High Distinction · STEM Scholarship</div></div></div>
+        <div class="dom-row"><div class="ic d-ai">🎓</div><div><div class="dn">BSc (Special) Computer Science</div><div class="dc">Wayamba University · 2nd Upper Honours</div></div></div>
+
+        <p style="color:var(--mut);font-size:.9rem;margin-top:22px">Based in Melbourne with full work rights. I move fastest where the requirements are murky and the stakeholders don't agree yet.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ CONTACT ============================ -->
+<section>
+  <div class="wrap">
+    <div class="cta-band reveal">
+      <h2>Let's talk about the role.</h2>
+      <p>Business Analyst · Product Owner · Business Data Analyst — Melbourne &amp; remote across AU.</p>
+      <div class="cta-links">
+        <a class="btn btn-p" href="mailto:melanidslv@gmail.com">melanidslv@gmail.com</a>
+        <a class="btn btn-g" href="https://linkedin.com/in/melanidesilva" target="_blank">LinkedIn ↗</a>
+        <a class="btn btn-g" href="resume.pdf" target="_blank">Resume PDF</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">© <span id="yr"></span> Melani De Silva · Business Analyst · Product Owner · Data Analytics · Melbourne</div>
+</footer>
+
+<script>
+document.getElementById('yr').textContent = new Date().getFullYear();
+
+/* STAR expand/collapse */
+document.querySelectorAll('.star-toggle').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    const star = btn.closest('.proj').querySelector('.star');
+    const open = star.classList.toggle('open');
+    btn.classList.toggle('open',open);
+  });
+});
+
+/* Domain filter */
+const chips = document.querySelectorAll('.chip');
+const projs = document.querySelectorAll('#projgrid .proj');
+chips.forEach(chip=>{
+  chip.addEventListener('click',()=>{
+    chips.forEach(c=>c.classList.remove('active'));
+    chip.classList.add('active');
+    const f = chip.dataset.f;
+    projs.forEach(p=>{
+      const show = f==='all' || p.dataset.domain.split(' ').includes(f);
+      p.classList.toggle('hidden',!show);
+    });
+  });
+});
+
+/* Scroll reveal */
+const io = new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+},{threshold:.12});
+document.querySelectorAll('.reveal').forEach((el,i)=>{
+  el.style.transitionDelay = (Math.min(i,6)*40)+'ms';
+  io.observe(el);
+});
+</script>
+</body>
+</html>
